@@ -218,7 +218,7 @@
 <p>当曲线$L$闭合的时候，会有一些不错的性质。闭合曲线会围成一个区域$D$，记其边界为$\partial{D}$<br>注意，区域$D$的边界路径可以有两个方向，这两个方向做的功显然互为相反数。习惯上记区域$D$在路径方向的左侧时记为正方向，记为$\partial{D^+}$。<br>曲线积分$\Gamma=\oint<em>{\partial{D^+}}{\vec{v}\cdot{d\vec{r}}}=\Gamma=\oint</em>{\partial{D^+}}{Pdx+Qdy}$成为区域$D$的环量。<br>【希腊字母$\Gamma$是$\gamma$的大写，读作”gamma伽马”】<br>三维环量定义类似。三维空间中的曲面$\Sigma$是有向的，它的边界的正方向用右手定则规定：右手四指围绕路径方向，右手大拇指与$\Sigma$正侧同向时，路径为正方向。</p>
 <h2 id="2-2-环量密度"><a href="#2-2-环量密度" class="headerlink" title="2.2 环量密度"></a>2.2 环量密度</h2><p>当区域$D$逐渐缩小时，以一个点$(x,y)$为中心，构建一个边长为$2a$和$2b$的很小的矩形区域，研究一下这个区域的环量，令$a\rightarrow0$，$b\rightarrow0$，每条边的功都可以求出来。假设在这个小区域内的力是线性均匀变化的，那么下边的力$P$平均一下，就是其中点的力$P(x,y-b$，移动距离为$2a$，那么做功就是$W_1=P(x,y-b)2a$。其余以此类推。  </p>
 <p>环量进行求和：$W=W_1+W_2+W_3+W_4$<br>注意到$P(x,y-b)-P(x,y+b)=-\frac{\partial{P}}{\partial{y}}2b$，因此：<br>$W=(W_1+W_3)+(W_2+W_4)$<br>$=-\frac{\partial{P}}{\partial{y}}2b2a+\frac{\partial{Q}}{\partial{x}}2a2b=(\frac{\partial{Q}}{\partial{x}}-\frac{\partial{P}}{\partial{y}})4ab$<br>这就是点$(x,y$附近的环量，是一个无穷小值。我们把这个环量除以该区域的面积$4ab$，得到的值$\frac{\partial{Q}}{\partial{x}}-\frac{\partial{P}}{\partial{y}}$称为环量面密度。</p>
-<h2 id="2-3-旋度"><a href="#2-3-旋度" class="headerlink" title="2.3 旋度"></a>2.3 旋度</h2><p>对于一个空间中的点，考虑平行于三个坐标面的环量密度<br>路径正方向用右手定则确定：右手四指围绕路径方向，右手大拇指与坐标轴同向时，路径为正方向。<br>定义向量$\vec{v}=(x,y,z)$终点的<strong>旋度</strong>为<br>$rot(\vec{i}$或$curl(\vec{v})=(\frac{\partial{R}}{\partial{y}}-\frac{\partial{Q}}{\partial{z}})\vec{i}+(\frac{\partial{P}}{\partial{z}}-\frac{\partial{R}}{\partial{x}})\vec{j}+(\frac{\partial{Q}}{\partial{x}}-\frac{\partial{P}}{\partial{y}})\vec{k}$<br>旋度用算法表示为$\nabla\times\vec{v}$<br>旋度描述了向量场在该点附近造成旋转的程度。旋度是一个矢量。</p>
+<h2 id="2-3-旋度"><a href="#2-3-旋度" class="headerlink" title="2.3 旋度"></a>2.3 旋度</h2><p>对于一个空间中的点，考虑平行于三个坐标面的环量密度<br>路径正方向用右手定则确定：右手四指围绕路径方向，右手大拇指与坐标轴同向时，路径为正方向。<br>定义向量$\vec{v}=(x,y,z)$终点的<strong>旋度</strong>为<br>$rot(\vec{i})$或$curl(\vec{v})=(\frac{\partial{R}}{\partial{y}}-\frac{\partial{Q}}{\partial{z}})\vec{i}+(\frac{\partial{P}}{\partial{z}}-\frac{\partial{R}}{\partial{x}})\vec{j}+(\frac{\partial{Q}}{\partial{x}}-\frac{\partial{P}}{\partial{y}})\vec{k}$<br>旋度用算法表示为$\nabla\times\vec{v}$<br>旋度描述了向量场在该点附近造成旋转的程度。旋度是一个矢量。</p>
 <h2 id="2-4-格林公式和斯托克斯公式"><a href="#2-4-格林公式和斯托克斯公式" class="headerlink" title="2.4 格林公式和斯托克斯公式"></a>2.4 格林公式和斯托克斯公式</h2><p>先考虑二维的情况，任何一个区域，都可以切割成小方块，两个小方向的环量之和等于拼起来的大方块的环量，这启发我们用新的方法来计算环量！<br>只要方块切得足够小，就可以用环量密度乘上微元面积来表示环量，即$(\frac{\partial{Q}}{\partial{x}}-\frac{\partial{P}}{\partial{y}})d\sigma$。<br>要求整个区域$D$的环量，那自然是把所有环量求和，即对上式求二重积分，这样格林公式就呼之欲出！<br><strong>Green格林公式</strong><br>$\oint<em>{\partial{D^+}}{Pdx+Qdy}=\iint_D(\frac{\partial{Q}}{\partial{x}}-\frac{\partial{P}}{\partial{y}})dxdy$<br>二维推广到三维，把曲面切割成微元，每个微元投影到三个坐标平面上，再用同样的思想，即可用曲面积分计算三维环量，这就是斯托克斯公式！<br><strong>Stokes斯托克斯公式</strong><br>$\oint</em>{\partial\Sigma^+}Pdx+Qdy+Rdz<br>=\iint<em>\Sigma(\frac{\partial{R}}{\partial{y}}-\frac{\partial{Q}}{\partial{z}})dydz+(\frac{\partial{P}}{\partial{z}}-\frac{\partial{R}}{\partial{x}})dzdx+(\frac{\partial{Q}}{\partial{x}}-\frac{\partial{P}}{\partial{y}})dxdy$<br>简记为$\oint</em>{\partial\Sigma^+}\vec{v}\cdot{d\vec{r}}=\iint_\Sigma\nabla\times\vec{v}\cdot{d\vec{S}}$<br>显然，斯托克斯公式是格林公式的推广，把斯托克斯公式投影到$xOy$平面上就变成了格林公式。</p>
 <h1 id="3-通量、散度与高斯公式"><a href="#3-通量、散度与高斯公式" class="headerlink" title="3.通量、散度与高斯公式"></a>3.通量、散度与高斯公式</h1><h2 id="3-1-通量"><a href="#3-1-通量" class="headerlink" title="3.1 通量"></a>3.1 通量</h2><p>前面环量研究的是比曲线积分，现在研究的是闭曲面积分<br>设在点$(x,y,z)$处液体流量面密度为$\vec{v}$，曲面该处的法向量为$\vec{n}$，微元面积为$dS$，则该微元的液体流量为$\vec{v}\cdot\vec{n}dS=\vec{v}\cdot{d\vec{S}}$。该处曲面的液体流量就是曲面积分$\Phi=\iint_\Sigma\vec{v}\cdot{d\vec{S}}$，这就是通量。<br>【希腊字母$\Phi$是$\phi$的大写，读作”fai弗爱”】</p>
 <h2 id="3-2散度"><a href="#3-2散度" class="headerlink" title="3.2散度"></a>3.2散度</h2><p>研究一下包含一个点的很小的闭曲面的通量。<br>将闭曲面近似为长方体，令$a,b,c\rightarrow0$，则其沿$x$轴方向的通量为<br>$[P(x+a,y,z)-P(x-a,y,z)]4ab=\frac{\partial{P}}{\partial{x}}2a4bc$<br>因此，该闭曲面的整体的通量为$(\frac{\partial{P}}{\partial{x}}+\frac{\partial{Q}}{\partial{y}}+\frac{\partial{R}}{\partial{z}})8abc$。<br>通量体密度被定义为$\vec{v}=(x,y,z)$的散度，记为<br>$div(\vec{v})=\frac{\partial{P}}{\partial{x}}+\frac{\partial{Q}}{\partial{y}}+\frac{\partial{R}}{\partial{z}}=\nabla\cdot\vec{v}$<br>散度描述了向量场在该点附近发散的程度。散度是标量。<br>举个例子，把向量场视为水流量场，从某一点流出或流入的水流量，由这一点的散度决定。散度为正，这一点为源点（相当于水龙头）；散度为负，这一点为汇点（相当于下水道）。</p>
@@ -450,40 +450,8 @@
   
 
   
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
-
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 
