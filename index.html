@@ -13,11 +13,13 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Zhang Hongpan">
   <meta name="keywords" content="">
-  <title>Hexo</title>
+  <title>Paradise</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -51,7 +53,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Paradise</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -141,12 +143,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/bg/bg.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="An elegant Material-Design theme for Hexo">
+            <span class="h2" id="subtitle" title="磨剑且十年">
               
             </span>
 
@@ -178,20 +180,26 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/01/25/delaunay/" target="_self">
+          <img src="/img/post/delaunay.jpg" srcset="/img/loading.gif" alt="C++实现Delaunay三角剖分算法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/22/hello-world/">Hello World</a>
+        <a href="/2021/01/25/delaunay/">C++实现Delaunay三角剖分算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/22/hello-world/">
+        <a href="/2021/01/25/delaunay/">
           
           
             
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+          C++实现Delaunay三角剖分算法该算法的伪代码为：
+12345678910111213141516171819202122232425262728input: 顶点列表(vertices)　　　　　　　　　　　　　　　　　　　　  　//vertices为外部生成的随机或乱序顶点列表output:已确定的三角形列表(triangles)　　　　初始化顶点列表　　　　创建索引列表(indice
         </a>
       </p>
 
@@ -199,8 +207,90 @@ Quick
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 11:10" pubdate>
-              2021-01-22
+            <time datetime="2021-01-25 23:40" pubdate>
+              2021-01-25
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/01/05/unordered-map/" target="_self">
+          <img src="/img/post/hash.jpg" srcset="/img/loading.gif" alt="C++给自定义类定义Hash计算">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/05/unordered-map/">C++给自定义类定义Hash计算</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/05/unordered-map/">
+          
+          
+            
+          
+          C++给自定义类定义Hash计算给自定义类定义hash计算，可以使用标准库的散列容器 unordered_set 和 unordered_map，有多重方法实现：1）给标准库中的 hash / equal_to实例化一个自定义类的类型；2）自定义函数对象;3）使用lambda表达式
+1234567891011121314151617181920212223242526272829303132333
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-05 23:40" pubdate>
+              2021-01-05
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/11/02/poisson/" target="_self">
+          <img src="/img/post/poisson.jpg" srcset="/img/loading.gif" alt="多元微积分总结">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/11/02/poisson/">多元微积分总结</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/02/poisson/">
+          
+          
+            
+          
+          这周在研究有关泊松重建的内容，论文中出现了多元微积分的内容，于是重新学习了一下高等数学的知识，在这里做一个记录。
+1. 向量场二维向量场中，平面上每个点$(x, y)$都有一个以该点为起点的向量$\vec{v}(x, y)$ ，其大小和方向与这个点有关。对向量进行正交分解，即可得到$\vec{v}(x, y)=P(x,y)\vec{i}+Q(x,y)\vec{j}$三维向量场和二维向量场类似，有$
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-02 23:39" pubdate>
+              2020-11-02
             </time>
           </div>
         
